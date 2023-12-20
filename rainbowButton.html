@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Rainbow Button</title>
+    <script>
+        // Build a button that - as you click it - changes colors through an array of colors.
+        // The button should have a default color of red.
+        // The button should have a default text of "Click Me".
+        // Use Bootstrap classes to style the button initially.
+        // Give the button an onclick attribute that calls the function changeColor
+        // The function should change the color of the webpage.
+
+        const colors = ['red','orange','yellow','green','blue','rebeccapurple','violet'];
+        let colorIndex= 0;
+        function changeColor(){
+        /*
+         Slightly less efficient way:
+         if (colorIndex > 6){
+            colorIndex = 0;
+        */
+
+
+
+
+            document.body.style.background = colors[colorIndex %7];
+        // Super Lame way: colorIndex = colorIndex + 1;
+        //Slightly Lame way: colorIndex += 1;
+        colorIndex++;
+        }
+
+
+    </script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <!-- Put the Button Here! -->
+            <button class="btn btn-danger" onclick="changeColor()" id="button">Click me</button>
+        </div>
+    </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>
