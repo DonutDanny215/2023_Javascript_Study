@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Challenge 3</title>
+    <script>
+        /*
+            Challenge 3: Create a webpage where:
+            1. When you click a button an image appears.
+            2. When you click the image the button disappears
+
+            First come up with a plan!
+
+1. HTML Elements
+Add a button - Onclick, ID
+Add an image - Onclick, ID, Style to disappear (Display:none)
+
+2. Javascript Elements
+Set up 2 functions - One for button and one for the image
+clickButton -> Change image to display:block
+clickImage -> Change button to display:none
+         */
+
+function clickButton() {
+    const image = document.getElementById("image");
+    image.style.display = "block"
+}
+
+function clickImage() {
+const button = document.getElementById("button");
+button.style.display = "none"
+}
+
+function smallImage(){
+    const image = document.getElementById("image")
+    image
+
+}
+
+
+
+
+
+
+    </script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <button class="btn btn-primary" onclick="clickButton()" id="Button">My Button - Click to See What Happens!</button>
+        </div>
+        <div class="col">
+            <img src="img/example2.jpg" id="image" onclick="clickImage()">
+        </div>
+    </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>
